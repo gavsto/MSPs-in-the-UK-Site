@@ -80,13 +80,13 @@ const config = {
             label: "Our TLP System",
           },
           {
-            href: "mailto:gavsto@gmail.com",
-            label: "Contact Us",
-            position: "right",
+            href: "https://forms.office.com/r/rvsY7pDH16",
+            label: "Ask Anonymous Question",
+            position: "left",
           },
           {
-            href: "https://gavsto.com",
-            label: "Gavsto Blog",
+            href: "mailto:gavsto@gmail.com",
+            label: "Contact Us",
             position: "right",
           },
         ],
