@@ -5,8 +5,7 @@ npm, and all `node_modules` live **inside Docker** — nothing is installed on y
 host, and dependencies never touch your host filesystem. Your source is bind-mounted
 in, so edits save to your real files and hot reload works.
 
-**Node is pinned to 18** on purpose — this site is Docusaurus `2.0.0-beta.15` (2022)
-and is not reliable on Node 20+.
+**Node 20 LTS** is used — the recommended runtime for Docusaurus 3.
 
 ## Quick start
 
@@ -54,7 +53,7 @@ Because Portainer's **Web editor** stacks have no build context, either:
 | File | Purpose |
 |------|---------|
 | `docker-compose.yml` | The stack — start it with `docker compose up -d`. |
-| `Dockerfile` | The environment: Node 18, deps baked in, runs as non-root `node`. |
+| `Dockerfile` | The environment: Node 20, deps baked in, runs as non-root `node`. |
 | `docker-entrypoint.sh` | Installs deps into the volume if empty, then starts the dev server. |
 | `.dockerignore` | Keeps host `node_modules`/`build` out of the image. |
 

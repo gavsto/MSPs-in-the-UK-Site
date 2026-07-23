@@ -4,9 +4,8 @@
 # (see DOCKER-DEV.md). To build it directly:
 #     docker build -t msps-in-the-uk-dev:latest .
 #
-# Node 18 is pinned deliberately: this site is Docusaurus 2.0.0-beta.15 (2022),
-# which is not reliable on Node 20+.
-FROM node:18-bookworm
+# Node 20 LTS — the recommended runtime for Docusaurus 3.
+FROM node:20-bookworm
 
 ENV NODE_ENV=development \
     CHOKIDAR_USEPOLLING=true
