@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+description: How the Traffic Light Protocol (TLP) governs access to materials and discussions within the MSPs in the UK community.
 ---
 
 # TLP (Traffic Light Protocol)
@@ -8,7 +9,7 @@ This is the system we use to determine the level of access you get to materials,
 
 Please do not ask to be raised to these levels. The raising of your level is discussed and determined privately. Where an entire channel has a coloured book in its channel name, this indicates that all discussion, resources and material within this channel is automatically treated as that colours TLP.
 
-# What are the different levels, and what do they mean?
+## What are the different levels, and what do they mean?
 
 ## TLP: RED
 

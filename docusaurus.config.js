@@ -40,6 +40,21 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: "img/social-card.png",
+      metadata: [
+        {
+          name: "description",
+          content:
+            "A free Discord community specifically for UK MSPs — connect, share and level up with hundreds of UK managed service providers.",
+        },
+        {
+          name: "keywords",
+          content:
+            "UK MSP, MSP UK, managed service provider, MSP community, UK MSP Discord, MSPs in the UK",
+        },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
+      ],
       navbar: {
         title: "MSPs in the UK",
         logo: {

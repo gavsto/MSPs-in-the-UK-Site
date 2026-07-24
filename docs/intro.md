@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: About MSPs in the UK — a free, UK-only community for managed service providers, founded by Gavin Stone.
 ---
 
 # MSPs in the UK

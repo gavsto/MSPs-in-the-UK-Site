@@ -1,5 +1,6 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
+description: The Code of Conduct for vendors participating in the MSPs in the UK community.
 ---
 
 # Code of Conduct - Vendors

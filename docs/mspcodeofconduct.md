@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: The Code of Conduct for MSPs in the MSPs in the UK community.
 ---
 
 # Code of Conduct - MSPs
