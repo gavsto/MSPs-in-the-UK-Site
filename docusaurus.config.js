@@ -133,10 +133,6 @@ const config = {
                 href: "https://cyberdrain.com",
               },
               {
-                label: "Homotechsual's Blog",
-                href: "https://homotechsual.dev/",
-              },
-              {
                 label: "Luke Whitelock's Blog (MSPP)",
                 href: "https://mspp.io/",
               },

@@ -1,39 +1,151 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Global theme for MSPs in the UK.
+ * Brand: Union Jack — deep navy primary, British red accent, Inter typography.
+ * Built on Infima (Docusaurus classic theme).
  */
 
-/* You can override the default Infima variables here. */
+/* Self-hosted Inter (variable) — no external CDN, works offline/in Docker. */
+@import "@fontsource-variable/inter";
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Primary — deep navy */
+  --ifm-color-primary: #123a7a;
+  --ifm-color-primary-dark: #10346e;
+  --ifm-color-primary-darker: #0f3167;
+  --ifm-color-primary-darkest: #0c2855;
+  --ifm-color-primary-light: #164688;
+  --ifm-color-primary-lighter: #184b93;
+  --ifm-color-primary-lightest: #1d59ad;
+
+  /* Accent — British red */
+  --brand-red: #cf142b;
+  --brand-red-dark: #ac0f22;
+  --brand-navy-deep: #012169;
+
+  /* Typography */
+  --ifm-font-family-base: "Inter Variable", "Inter", system-ui, -apple-system,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  --ifm-heading-font-weight: 700;
+  --ifm-font-weight-semibold: 600;
+
+  /* Shape & rhythm */
   --ifm-code-font-size: 95%;
+  --ifm-global-radius: 10px;
+  --ifm-button-border-radius: 8px;
+  --ifm-navbar-shadow: 0 1px 0 rgba(18, 58, 122, 0.08);
+  --ifm-card-background-color: #ffffff;
+  --brand-card-border: rgba(18, 58, 122, 0.1);
+  --brand-card-shadow: 0 1px 2px rgba(2, 33, 105, 0.06),
+    0 8px 24px rgba(2, 33, 105, 0.06);
+  --brand-card-shadow-hover: 0 2px 4px rgba(2, 33, 105, 0.08),
+    0 16px 40px rgba(2, 33, 105, 0.14);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-html[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+/* Lighter, higher-contrast palette for dark mode. */
+html[data-theme="dark"] {
+  --ifm-color-primary: #6ea3ea;
+  --ifm-color-primary-dark: #5090e4;
+  --ifm-color-primary-darker: #4589e2;
+  --ifm-color-primary-darkest: #2c6fcf;
+  --ifm-color-primary-light: #8cb7ef;
+  --ifm-color-primary-lighter: #9bc0f1;
+  --ifm-color-primary-lightest: #c3d9f7;
+
+  --brand-red: #ff5566;
+  --brand-red-dark: #ff3347;
+
+  --ifm-background-color: #0b1626;
+  --ifm-background-surface-color: #0f1d31;
+  --ifm-card-background-color: #10203a;
+  --brand-card-border: rgba(255, 255, 255, 0.08);
+  --brand-card-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),
+    0 8px 24px rgba(0, 0, 0, 0.35);
+  --brand-card-shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.4),
+    0 16px 40px rgba(0, 0, 0, 0.5);
 }
 
+/* ---- Navbar ------------------------------------------------------------- */
+.navbar {
+  border-bottom: 1px solid var(--brand-card-border);
+  backdrop-filter: saturate(180%) blur(6px);
+}
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.navbar__link:hover,
+.navbar__link--active:hover {
+  color: var(--brand-red);
+}
+/* All four doc-type items share one sidebar, so Docusaurus marks them ALL active
+   on any docs page. Keep active links identical to the rest; red is hover-only. */
+.navbar__link--active {
+  color: var(--ifm-navbar-link-color);
+}
+
+/* ---- Buttons ------------------------------------------------------------ */
+.button {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: transform 0.12s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+.button:hover {
+  transform: translateY(-1px);
+}
+
+/* Red CTA — used for primary calls to action (e.g. Join the Discord). */
+.button--accent {
+  background-color: var(--brand-red);
+  border-color: var(--brand-red);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(207, 20, 43, 0.32);
+}
+.button--accent:hover {
+  background-color: var(--brand-red-dark);
+  border-color: var(--brand-red-dark);
+  color: #fff;
+}
+
+/* Ghost button that reads on the dark hero. */
+.button--hero-ghost {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: #fff;
+}
+.button--hero-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+  color: #fff;
+}
+
+/* ---- Links -------------------------------------------------------------- */
+.markdown a,
+article a {
+  font-weight: 500;
+}
+
+/* ---- Footer ------------------------------------------------------------- */
+.footer--dark {
+  --ifm-footer-background-color: #0a1a33;
+  --ifm-footer-color: rgba(255, 255, 255, 0.75);
+  --ifm-footer-link-color: rgba(255, 255, 255, 0.72);
+  --ifm-footer-title-color: #ffffff;
+  border-top: 3px solid var(--brand-red);
+}
+.footer__link-item:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ---- Code highlight lines (kept from template) -------------------------- */
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
 }
-
-html[data-theme='dark'] .docusaurus-highlight-code-line {
+html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
