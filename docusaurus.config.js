@@ -28,16 +28,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-        },
+        blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -51,7 +43,7 @@ const config = {
       navbar: {
         title: "MSPs in the UK",
         logo: {
-          alt: "My Site Logo",
+          alt: "MSPs in the UK",
           src: "img/logo.png",
         },
         items: [
